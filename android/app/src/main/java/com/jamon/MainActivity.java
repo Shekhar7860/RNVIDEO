@@ -1,4 +1,4 @@
-package com.jamon;
+package com.modicarehelp;
 
 import com.facebook.react.ReactActivity;
 
