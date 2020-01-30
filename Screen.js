@@ -118,6 +118,7 @@ class Screen extends Component {
   onChangeQuality={e => this.setState({ quality: e.quality })}
   onError={e => this.setState({ error: e.error })}
   style={{ alignSelf: 'stretch', height: 300 }}
+  apiKey="AIzaSyCkP5eDNuY9riT87KESPInG7VbYUSiZZV0"
   
 />
 </View>
@@ -133,6 +134,7 @@ class Screen extends Component {
   onChangeQuality={e => this.setState({ quality: e.quality })}
   onError={e => this.setState({ error: e.error })}
   style={{ alignSelf: 'stretch', height: 300 }}
+  apiKey="AIzaSyB2IGYbtz-iTLj1Q0fjGW2uYre6hdAhgmM"
   
 />
 </View>
@@ -148,6 +150,7 @@ class Screen extends Component {
   onChangeQuality={e => this.setState({ quality: e.quality })}
   onError={e => this.setState({ error: e.error })}
   style={{ alignSelf: 'stretch', height: 300 }}
+  apiKey="AIzaSyByq_EaxQPVTzOBDTok_LP7MQn8OoOBf0k"
   
 />
 </View>

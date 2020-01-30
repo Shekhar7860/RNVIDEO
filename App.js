@@ -10,8 +10,15 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 //Import React Native Video to play video
 
 import Login from './Login'
+import Joining from './Joining'
 import Home from './Home'
+import Benefits from './Benefits'
 import Screen from './Screen'
+import Sponsoring from './Sponsoring'
+import Seminar from './Seminar'
+import ProductDemos from './ProductDemos'
+import Offers from './Offers'
+
 
 
 //Media Controls to control Play/Pause/Seek and full screen
@@ -20,6 +27,13 @@ const App = createStackNavigator(
     Login: { screen: Login },
     Home: { screen: Home },
     Screen1: { screen: Screen},
+    Joining: { screen: Joining},
+    Benefits: { screen: Benefits},
+    Sponsoring: { screen: Sponsoring},
+    Seminar: { screen: Seminar},
+    ProductDemos: { screen: ProductDemos},
+    Offers: { screen: Offers}
+
 
 
   
