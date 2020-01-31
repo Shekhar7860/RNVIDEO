@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 //Import React
 import { Platform, StyleSheet, Text, View, ScrollView } from 'react-native';
 import YouTube from 'react-native-youtube';
+import firebase from 'react-native-firebase';
+
+const Banner = firebase.admob.Banner;
+const AdRequest = firebase.admob.AdRequest;
+
+const advert = firebase.admob().interstitial('ca-app-pub-3476542526287283/5336778274')
+const request = new AdRequest();
+request.addKeyword('foobar');
 class Screen extends Component {
  
   constructor(props) {
@@ -17,40 +25,14 @@ class Screen extends Component {
     };
   }
  
-  onSeek = seek => {
-    //Handler for change in seekbar
-    this.videoPlayer.seek(seek);
-  };
+  componentDidMount = () => {
+    advert.loadAd(request.build());
  
-  onPaused = playerState => {
-    //Handler for Video Pause
-    this.setState({
-      paused: !this.state.paused,
-      playerState,
+    advert.on('onAdLoaded', () => {
+      console.log('Advert ready to show.');
     });
-  };
- 
-  onReplay = () => {
-    //Handler for Replay
-    this.setState({ playerState: PLAYER_STATES.PLAYING });
-    this.videoPlayer.seek(0);
-  };
- 
-  onProgress = data => {
-    const { isLoading, playerState } = this.state;
-    // Video Player will continue progress even if the video already ended
-    if (!isLoading && playerState !== PLAYER_STATES.ENDED) {
-      this.setState({ currentTime: data.currentTime });
-    }
-  };
-  
-  onLoad = data => this.setState({ duration: data.duration, isLoading: false });
-  
-  onLoadStart = data => this.setState({ isLoading: true });
-  
-  onEnd = () => this.setState({ playerState: PLAYER_STATES.ENDED });
-  
-  onError = () => alert('Oh! ', error);
+    
+  }
   
   exitFullScreen = () => {
     alert('Exit full screen');
@@ -75,7 +57,7 @@ class Screen extends Component {
       <View style={{flex:1}}>
       <ScrollView>
       <View style={{marginTop:20}}>
-      <Text style={{textAlign:'center', marginBottom : 10}}>Modicare Success Story</Text>
+      <Text style={{textAlign:'center', marginBottom : 10}}>Here Are Successful persons who have earned a lot from modicare....check videos and get the insiration(यहां वे सफल व्यक्ति हैं, जिन्होंने बहुत कम आय अर्जित की है .... वीडियो देखें और आग्रह प्राप्त करें)</Text>
     <YouTube
   videoId="S40G85NSnc0" // The YouTube video ID
   // control playback of video with true/false
@@ -90,9 +72,9 @@ class Screen extends Component {
 />
 </View>
 <View style={{marginTop:20}}>
-<Text style={{textAlign:'center', marginBottom : 10}}>Modicare Sanitary Napkin Demo</Text>
+<Text style={{textAlign:'center', marginBottom : 10}}>Women Purchasing Car From Modicare (मोदीकेयर से कार खरीदती महिलाएं)</Text>
  <YouTube
-  videoId="Ypy02vMMyTg" // The YouTube video ID
+  videoId="RpyxKvRuFgY" // The YouTube video ID
   // control playback of video with true/false
    // control whether the video should play in fullscreen or inline
   loop // control whether the video should loop when ended
@@ -107,9 +89,9 @@ class Screen extends Component {
 />
 </View>
 <View style={{marginTop:20}}>
-<Text style={{textAlign:'center', marginBottom : 10}}>Things To Avoid In Modicare Business</Text>
+<Text style={{textAlign:'center', marginBottom : 10}}>Success Story Of A HouseWife(एक हाउसवाइफ की सफलता की कहानी)</Text>
  <YouTube
-  videoId="PBCYotk_SCY" // The YouTube video ID
+  videoId="j96yC4Pbf3E" // The YouTube video ID
   // control playback of video with true/false
    // control whether the video should play in fullscreen or inline
   loop // control whether the video should loop when ended
@@ -122,38 +104,8 @@ class Screen extends Component {
   
 />
 </View>
-<View style={{marginTop:20}}>
-<Text style={{textAlign:'center', marginBottom : 10}}>Modicare EnviroChip Demo</Text>
- <YouTube
-  videoId="EXOEs0K8-wg" // The YouTube video ID
-  // control playback of video with true/false
-   // control whether the video should play in fullscreen or inline
-  loop // control whether the video should loop when ended
-  onReady={e => this.setState({ isReady: true })}
-  onChangeState={e => this.setState({ status: e.state })}
-  onChangeQuality={e => this.setState({ quality: e.quality })}
-  onError={e => this.setState({ error: e.error })}
-  style={{ alignSelf: 'stretch', height: 300 }}
-  apiKey="AIzaSyB2IGYbtz-iTLj1Q0fjGW2uYre6hdAhgmM"
-  
-/>
-</View>
-<View style={{marginTop:20}}>
-<Text style={{textAlign:'center', marginBottom : 10}}>Modicare New Products 2020</Text>
- <YouTube
-  videoId="0vgS5WzDTY4" // The YouTube video ID
-  // control playback of video with true/false
-   // control whether the video should play in fullscreen or inline
-  loop // control whether the video should loop when ended
-  onReady={e => this.setState({ isReady: true })}
-  onChangeState={e => this.setState({ status: e.state })}
-  onChangeQuality={e => this.setState({ quality: e.quality })}
-  onError={e => this.setState({ error: e.error })}
-  style={{ alignSelf: 'stretch', height: 300 }}
-  apiKey="AIzaSyByq_EaxQPVTzOBDTok_LP7MQn8OoOBf0k"
-  
-/>
-</View>
+
+
 </ScrollView>
 </View>
     );

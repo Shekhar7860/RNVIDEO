@@ -24,6 +24,14 @@ export default class Home extends Component {
  render () {
 		return (<View
 			 style={{flex:1}}>
+			   <Banner
+       style={{alignSelf:'center',marginLeft:0, marginTop:20}}
+    size={"SMALL_BANNER"}
+  unitId={"ca-app-pub-3476542526287283/4101494326"}
+  request={request.build()}
+  onAdLoaded={() => {
+    console.log('Advert loaded');
+  }} />
 			 <TouchableOpacity style={{width:"100%", flexDirection : 'row', marginTop:30}}>
 			 <View style={{width:"5%"}}></View>
 			 <TouchableOpacity onPress={() => this.props.navigation.navigate("Joining")} style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Modicare Joining{"\n"}मोडिकारे जुड़ना</Text></TouchableOpacity>
@@ -57,7 +65,7 @@ export default class Home extends Component {
 			 </TouchableOpacity>
 			  <TouchableOpacity style={{width:"100%", flexDirection : 'row', marginTop:20}}>
 			 <View style={{width:"5%"}}></View>
-			 <TouchableOpacity style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Modicare Complaints{"\n"}मोडिकेयर शिकायतें</Text></TouchableOpacity>
+			 <TouchableOpacity onPress={() => this.props.navigation.navigate("Complaints")} style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Modicare Complaints{"\n"}मोडिकेयर शिकायतें</Text></TouchableOpacity>
 			 <View style={{width:"5%"}}></View>
 			 <TouchableOpacity style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Modicare Business Plan{"\n"}मोदीकेयर बिजनेस प्लान</Text></TouchableOpacity>
 			 <View style={{width:"5%"}}></View>

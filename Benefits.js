@@ -16,8 +16,8 @@ export default class Benefits extends Component {
 
                 <Text style={{textAlign:"center", margin:10}}>3. On Every Modicare product, you will get 25 days of money back guarantee</Text>
                  <Text style={{textAlign:"center", margin:10}}>4. After Joining, you can do your business and earn car fund, travel fund, house fund and unlimited income from modicare</Text>
-			  <Text style={{textAlign:"center", margin:10}}>5. If you purchase modicare minimum of 2500rs continuously for 6 months, you will free products of approx 2500rs for 7th month>
-            <Text style={{textAlign:"center", margin:10}}>6. If you purchase modicare minimum of 2500rs continuously for 12 months, you will free products of approx 5000rs for 13th month>
+			  <Text style={{textAlign:"center", margin:10}}>5. If you purchase modicare minimum of 2500rs continuously for 6 months, you will free products of approx 2500rs for 7th month</Text>
+            <Text style={{textAlign:"center", margin:10}}>6. If you purchase modicare minimum of 2500rs continuously for 12 months, you will free products of approx 5000rs for 13th month</Text>
 
 
 			 <View style={{marginTop:20}}>

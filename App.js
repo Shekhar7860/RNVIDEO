@@ -18,6 +18,8 @@ import Sponsoring from './Sponsoring'
 import Seminar from './Seminar'
 import ProductDemos from './ProductDemos'
 import Offers from './Offers'
+import Complaints from './Complaints'
+
 
 
 
@@ -32,7 +34,9 @@ const App = createStackNavigator(
     Sponsoring: { screen: Sponsoring},
     Seminar: { screen: Seminar},
     ProductDemos: { screen: ProductDemos},
-    Offers: { screen: Offers}
+    Offers: { screen: Offers},
+     Complaints: { screen: Complaints}
+
 
 
 
