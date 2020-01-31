@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 import {View,Text , TouchableOpacity} from 'react-native'
+import firebase from 'react-native-firebase';
+
+const Banner = firebase.admob.Banner;
+const AdRequest = firebase.admob.AdRequest;
+
+const advert = firebase.admob().interstitial('ca-app-pub-3476542526287283/5336778274')
+const request = new AdRequest();
+request.addKeyword('foobar');
 export default class Home extends Component {
 	
 	takeMe = () => {
-		alert("hiiii")
+		// alert("hiiii")
+	}
+	componentDidMount = () => {
+		advert.loadAd(request.build());
+ 
+		advert.on('onAdLoaded', () => {
+		  console.log('Advert ready to show.');
+		});
+		
 	}
  render () {
 		return (<View
