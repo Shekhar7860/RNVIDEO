@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {View,Text , TouchableOpacity, ScrollView} from 'react-native'
 import firebase from 'react-native-firebase';
-const advert2 = firebase.admob().rewarded('ca-app-pub-3476542526287283/9980399166')
-const advert = firebase.admob().interstitial('ca-app-pub-3476542526287283/1283651495')
+const advert2 = firebase.admob().rewarded('ca-app-pub-3476542526287283/2361230769')
+const advert = firebase.admob().interstitial('ca-app-pub-3476542526287283/2361230769')
 const Banner = firebase.admob.Banner;
 const AdRequest = firebase.admob.AdRequest;
 const request = new AdRequest();

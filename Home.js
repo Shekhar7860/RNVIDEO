@@ -14,11 +14,20 @@ export default class Home extends Component {
 		// alert("hiiii")
 	}
 	componentDidMount = () => {
-		advert.loadAd(request.build());
- 
-		advert.on('onAdLoaded', () => {
-		  console.log('Advert ready to show.');
-		});
+		    advert.loadAd(request.build());
+        
+  
+advert.on('onAdLoaded', () => {
+  console.log('Advert ready to show.');
+});
+
+setTimeout(() => {
+  if (advert.isLoaded()) {
+    advert.show();
+  } else {
+  console.log('error occured')
+  }
+}, 1000)
 		
 	}
  render () {
