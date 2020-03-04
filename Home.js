@@ -58,7 +58,7 @@ setTimeout(() => {
 			 <View style={{width:"5%"}}></View>
 			 <TouchableOpacity onPress={() => this.props.navigation.navigate("ProductDemos")} style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Modicare Product Demos{"\n"}Modicare उत्पाद प्रदर्शन</Text></TouchableOpacity>
 			 <View style={{width:"5%"}}></View>
-			 <TouchableOpacity style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Buying Modicare Products{"\n"}Modicare उत्पाद खरीदना</Text></TouchableOpacity>
+			 <TouchableOpacity onPress={() => this.props.navigation.navigate("Buy")} style={{width:"27%", height : 80, borderWidth:1, justifyContent :"center"}}><Text style={{fontSize : 12, textAlign:"center"}}> Buying Modicare Products{"\n"}Modicare उत्पाद खरीदना</Text></TouchableOpacity>
 
 
 			 </TouchableOpacity>

@@ -12,6 +12,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Login from './Login'
 import Joining from './Joining'
 import Home from './Home'
+import Buying from './Buying'
 import Benefits from './Benefits'
 import Screen from './Screen'
 import Sponsoring from './Sponsoring'
@@ -26,7 +27,7 @@ import Complaints from './Complaints'
 //Media Controls to control Play/Pause/Seek and full screen
 const App = createStackNavigator(
   {
-    Login: { screen: Login },
+    Login: { screen: Home },
     Home: { screen: Home },
     Screen1: { screen: Screen},
     Joining: { screen: Joining},
@@ -35,7 +36,8 @@ const App = createStackNavigator(
     Seminar: { screen: Seminar},
     ProductDemos: { screen: ProductDemos},
     Offers: { screen: Offers},
-     Complaints: { screen: Complaints}
+     Complaints: { screen: Complaints},
+     Buy: { screen: Buying}
 
 
 

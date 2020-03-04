@@ -192,6 +192,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+" 
      implementation project(':react-native-firebase')
+      implementation "com.google.firebase:firebase-database:17.0.0"
       implementation "com.google.firebase:firebase-ads:17.2.1"
   implementation "com.google.android.gms:play-services-base:16.1.0"
   implementation "com.google.firebase:firebase-core:16.0.9"
